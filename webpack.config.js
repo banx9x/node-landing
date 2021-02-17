@@ -1,5 +1,3 @@
-// Webpack configuration
-
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
@@ -22,7 +20,9 @@ module.exports = (env) => {
             index: "./src/js/index.js",
         },
         output: {
-            filename: prod ? "js/[name].[contenthash].js" : "js/[name].js",
+            filename: prod
+                ? "resources/js/[name].[contenthash].js"
+                : "resources/js/[name].js",
             path: path.join(__dirname, "build"),
         },
         module: {
