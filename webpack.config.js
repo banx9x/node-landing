@@ -28,6 +28,11 @@ module.exports = (env) => {
         module: {
             rules: [
                 {
+                    test: /\.js$/,
+                    exclude: [path.join(__dirname, "node_modules")],
+                    use: ["babel-loader"],
+                },
+                {
                     test: /\.css$/i,
                     use: [
                         {
@@ -35,6 +40,7 @@ module.exports = (env) => {
                             options: { publicPath: "" },
                         },
                         { loader: "css-loader" },
+                        { loader: "postcss-loader" },
                     ],
                 },
                 {
