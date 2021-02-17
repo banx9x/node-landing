@@ -30,16 +30,28 @@ module.exports = (env) => {
                 {
                     test: /\.css$/i,
                     use: [
-                        prod ? MiniCssExtractPlugin.loader : "style-loader",
-                        "css-loader",
+                        {
+                            loader: MiniCssExtractPlugin.loader,
+                            options: { publicPath: "" },
+                        },
+                        { loader: "css-loader" },
                     ],
+                },
+                {
+                    test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                    use: {
+                        loader: "file-loader",
+                        options: {
+                            name: "resources/fonts/[name].[ext]",
+                        },
+                    },
                 },
                 {
                     test: /\.(png|svg|jpg|jpeg|webp|gif)$/i,
                     use: {
                         loader: "file-loader",
                         options: {
-                            name: "images/[name].[ext]",
+                            name: "resources/images/[name].[ext]",
                         },
                     },
                 },
@@ -52,12 +64,16 @@ module.exports = (env) => {
                 template: "./src/index.html",
                 chunks: ["common", "index"],
             }),
-            new FaviconsWebpackPlugin("./src/favicon.png"),
+            new FaviconsWebpackPlugin({
+                logo: "./src/favicon.png",
+                cache: true,
+                prefix: "resources/fonts/",
+            }),
             new CleanWebpackPlugin(),
             new MiniCssExtractPlugin({
                 filename: prod
-                    ? "css/[name].[contenthash].css"
-                    : "css/[name].css",
+                    ? "resources/css/[name].[contenthash].css"
+                    : "resources/css/[name].css",
                 chunkFilename: "[id].css",
             }),
         ],
