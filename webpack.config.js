@@ -1,3 +1,5 @@
+const path = require("path");
+
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
@@ -6,8 +8,11 @@ const TerserPlugin = require("terser-webpack-plugin");
 
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-
-const path = require("path");
+const PurgeCSSPlugin = require("purgecss-webpack-plugin");
+const glob = require("glob");
+const PATHS = {
+    src: path.join(__dirname, "src"),
+};
 
 module.exports = (env) => {
     // use to check environment
@@ -31,6 +36,24 @@ module.exports = (env) => {
                     test: /\.js$/,
                     exclude: [path.join(__dirname, "node_modules")],
                     use: ["babel-loader"],
+                },
+                {
+                    test: /\.(s[ac]ss)$/,
+                    use: [
+                        {
+                            loader: MiniCssExtractPlugin.loader,
+                            options: { publicPath: "" },
+                        },
+                        {
+                            loader: "css-loader",
+                        },
+                        {
+                            loader: "postcss-loader",
+                        },
+                        {
+                            loader: "sass-loader",
+                        },
+                    ],
                 },
                 {
                     test: /\.css$/i,
@@ -73,7 +96,7 @@ module.exports = (env) => {
             new FaviconsWebpackPlugin({
                 logo: "./src/favicon.png",
                 cache: true,
-                prefix: "resources/fonts/",
+                prefix: "resources/favicon/",
             }),
             new CleanWebpackPlugin(),
             new MiniCssExtractPlugin({
@@ -81,6 +104,9 @@ module.exports = (env) => {
                     ? "resources/css/[name].[contenthash].css"
                     : "resources/css/[name].css",
                 chunkFilename: "[id].css",
+            }),
+            new PurgeCSSPlugin({
+                paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
             }),
         ],
         optimization: {

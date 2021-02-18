@@ -1,5 +1,5 @@
 // CSS
-import "../css/index.css";
+import "../scss/index.scss";
 
 // Data
 import data from "../assets/menu.json";
