@@ -1,8 +1,9 @@
 const path = require("path");
-
+const webpack = require("webpack");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 const TerserPlugin = require("terser-webpack-plugin");
 
@@ -21,7 +22,6 @@ module.exports = (env) => {
     return {
         entry: {
             // TODO
-            common: "./src/js/common.js",
             index: "./src/js/index.js",
         },
         output: {
@@ -29,6 +29,7 @@ module.exports = (env) => {
                 ? "resources/js/[name].[contenthash].js"
                 : "resources/js/[name].js",
             path: path.join(__dirname, "build"),
+            publicPath: "",
         },
         module: {
             rules: [
@@ -59,8 +60,7 @@ module.exports = (env) => {
                     test: /\.css$/i,
                     use: [
                         {
-                            loader: MiniCssExtractPlugin.loader,
-                            options: { publicPath: "" },
+                            loader: "style-loader",
                         },
                         { loader: "css-loader" },
                         { loader: "postcss-loader" },
@@ -107,6 +107,26 @@ module.exports = (env) => {
             }),
             new PurgeCSSPlugin({
                 paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
+            }),
+            new CopyPlugin({
+                patterns: [
+                    {
+                        from: "./src/images/",
+                        to: "resources/images/",
+                    },
+                    {
+                        from: "./src/assets/particlesjs-config.json",
+                        to: "resources/assets/",
+                    },
+                ],
+                options: {
+                    concurrency: 100,
+                },
+            }),
+            new webpack.ProvidePlugin({
+                $: "jquery",
+                jQuery: "jquery",
+                "window.jQuery": "jquery",
             }),
         ],
         optimization: {

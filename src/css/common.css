@@ -1,27 +1,3 @@
-body {
-    font-family: Nunito, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-        "Segoe UI Symbol";
-}
 
-/* Call Support */
-.call-support {
-    position: fixed;
-    bottom: 95px;
-    right: 25px;
-    width: 60px;
-    height: 60px;
-    background-color: rgb(225, 225, 225);
-    border-radius: 50%;
-    color: #fff;
-    font-size: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    animation: wave 1s linear infinite;
-}
 
-.call-support svg * {
-    fill: url(#gradient);
-}
+
