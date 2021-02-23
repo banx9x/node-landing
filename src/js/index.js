@@ -31,6 +31,7 @@ import "owl.carousel";
 // Review
 $(document).ready(function () {
     const owl = $(".review-slider");
+
     owl.owlCarousel({
         nav: false,
         dots: false,
@@ -49,10 +50,8 @@ $(document).ready(function () {
             },
         },
     });
-    // owl.on("initialized.owl.carousel", (e) => {
-    //     document.querySelector(".owl-stage").style.display = "flex";
-    //     document.querySelector(".owl-nav").style.display = "none";
-    // });
+
+    owl.trigger("next.owl.carousel");
 });
 
 // Register

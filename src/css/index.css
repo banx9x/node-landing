@@ -336,7 +336,7 @@ img {
 }
 
 .accordion-button:not(.collapsed) {
-    background-color: #f16fa0;
+    background-color: #2c234d;
     color: #fff;
 }
 .accordion-button:not(.collapsed)::after {
@@ -786,10 +786,14 @@ iframe {
     margin-top: 2rem;
 }
 
+/* Gallery */
+.fa-plus {
+    color: #fff;
+}
 
 /* Footer */
 .page-footer {
-    background-color: #F1F1F1;
+    background-color: #f1f1f1;
 }
 
 .page-footer ul {
