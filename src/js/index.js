@@ -6,7 +6,7 @@ import "@fortawesome/fontawesome-free/js/all.min.js";
 import "particles.js";
 particlesJS.load(
     "page-header",
-    "./resources/assets/particlesjs-config.json",
+    "resources/assets/particlesjs-config.json",
     () => {
         const particles = document.querySelector(".particles-js-canvas-el");
         particles.style.cssText = `
@@ -16,7 +16,9 @@ particlesJS.load(
             width: 100%;
             height: 100%;
             z-index: -1;
+            background-color: #6b28d5;
         `;
+        console.log("Sao không được?");
     }
 );
 
@@ -28,30 +30,91 @@ import "../css/index.css";
 
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel";
+
+import "slick-carousel";
 // Review
 $(document).ready(function () {
     const owl = $(".review-slider");
 
     owl.owlCarousel({
-        nav: false,
+        nav: true,
         dots: false,
-        items: 1,
-        center: true,
-        stagePadding: 30,
+        items: 2,
+        center: false,
+        stagePadding: 0,
+        loop: true,
         responsive: {
             0: {
-                stagePadding: 30,
+                stagePadding: 0,
+                items: 1,
             },
             768: {
-                stagePadding: 90,
+                stagePadding: 60,
+                items: 1,
             },
-            1200: {
-                stagePadding: 180,
-            },
+            1200: {},
         },
     });
 
     owl.trigger("next.owl.carousel");
+
+    const prev = document.querySelector(".owl-prev");
+    const next = document.querySelector(".owl-next");
+
+    prev.addEventListener("click", () => owl.trigger("prev.owl.carousel"));
+    next.addEventListener("click", () => owl.trigger("next.owl.carousel"));
+
+    const teacher = $(".owl-slider");
+
+    teacher.slick({
+        infinite: true,
+        arrows: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        centerMode: true,
+        centerPadding: 30,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 2,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 1,
+                },
+            },
+        ],
+    });
+
+    const teacherPrev = document.querySelector(".teacher-prev");
+    const teacherNext = document.querySelector(".teacher-next");
+
+    teacherPrev.addEventListener("click", () => {
+        teacher.slick("slickPrev");
+    });
+    teacherNext.addEventListener("click", () => teacher.slick("slickNext"));
+
+    const product = $(".product-slider");
+
+    product.slick({
+        infinite: false,
+        arrows: false,
+        slidesToShow: 1,
+        centerPadding: 30,
+    });
+
+    const productPrev = document.querySelector(".product-prev");
+    const productNext = document.querySelector(".product-next");
+
+    productPrev.addEventListener("click", () => {
+        product.slick("slickPrev");
+    });
+    productNext.addEventListener("click", () => product.slick("slickNext"));
 });
 
 // Register
