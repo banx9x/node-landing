@@ -794,6 +794,7 @@ iframe {
 /* Footer */
 .page-footer {
     background-color: #f1f1f1;
+    padding: 4em 0 2em;
 }
 
 .page-footer ul {

@@ -119,7 +119,7 @@ document.getElementById("btn-register").addEventListener(
                     Phone: phoneVal,
                     Info: noteVal,
                     Link: window.location.href,
-                    ItemId: "g3t",
+                    ItemId: "7jg",
                     Type: 3,
                 };
 
