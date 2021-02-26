@@ -103,6 +103,16 @@
                                 <a class="nav-link" href="#track">Nội dung</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="#product"
+                                    >Sản phẩm học viên</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#teacher"
+                                    >Giảng viên</a
+                                >
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="#register">Liên hệ</a>
                             </li>
                         </ul>
@@ -110,7 +120,7 @@
                 </nav>
 
                 <div class="intro">
-                    <div class="row">
+                    <div class="row intro-container">
                         <div class="col-12 col-lg-6">
                             <div class="intro-content">
                                 <h1 class="heading">
@@ -130,14 +140,27 @@
                                 <p class="description">
                                     Giảng dạy chuyên nghiệp, kiến thức thực tế
                                     và cam kết việc làm sau khi tốt nghiệp
+                                    <br>
+                                    LH Tư vấn nhanh: 0382416368 (Ms. Hương)
                                 </p>
+                                <!-- <a
+                                    href="#register"
+                                    referrerpolicy="no-referer"
+                                    class="btn btn-lg btn-primary"
+                                >
+                                    <i class="far fa-paper-plane"></i>
+                                    Tư vấn nhanh
+                                    <br />
+                                    0965338283
+                                </a>
+                                <br /> -->
                                 <a
                                     href="#register"
                                     referrerpolicy="no-referer"
                                     class="btn btn-lg btn-primary"
                                 >
                                     <i class="far fa-paper-plane"></i>
-                                    Liên hệ tư vấn
+                                    Đăng ký tư vấn
                                 </a>
                             </div>
                         </div>
@@ -516,7 +539,7 @@
                                             aria-expanded="false"
                                             aria-controls="collapseThree"
                                         >
-                                            Module 3: NodeJS - Phần 1
+                                            Module 3: NodeJS Căn bản
                                         </button>
                                     </h2>
                                     <div
@@ -566,7 +589,7 @@
                                             aria-expanded="false"
                                             aria-controls="collapseFour"
                                         >
-                                            Module 4: NodeJS - Phần 2
+                                            Module 4: NodeJS Nâng cao
                                         </button>
                                     </h2>
                                     <div
@@ -624,7 +647,7 @@
                                             aria-expanded="false"
                                             aria-controls="collapseFive"
                                         >
-                                            Module 5: ExpressJS - Phần 1
+                                            Module 5: ExpressJS Căn bản
                                         </button>
                                     </h2>
                                     <div
@@ -681,7 +704,7 @@
                                             aria-expanded="false"
                                             aria-controls="collapseSix"
                                         >
-                                            Module 6: ExpressJS - Phần 2
+                                            Module 6: ExpressJS Nâng cao
                                         </button>
                                     </h2>
                                     <div
@@ -851,7 +874,7 @@
                                             aria-expanded="false"
                                             aria-controls="collapseNine"
                                         >
-                                            Module 9: Express - Phần 3
+                                            Module 9: Express - Template Engine
                                         </button>
                                     </h2>
                                     <div
@@ -905,7 +928,7 @@
                                             aria-expanded="false"
                                             aria-controls="collapseTen"
                                         >
-                                            Module 10: ExpressJS - Phần 4
+                                            Module 10: ExpressJS - Security
                                         </button>
                                     </h2>
                                     <div
@@ -958,7 +981,8 @@
                                             aria-expanded="false"
                                             aria-controls="collapseEleven"
                                         >
-                                            Module 11: ExpressJS - Phần 5
+                                            Module 11: ExpressJS - Upload
+                                            multi-file, Service mail
                                         </button>
                                     </h2>
                                     <div
@@ -1021,7 +1045,8 @@
                                             aria-expanded="false"
                                             aria-controls="collapseTwelve"
                                         >
-                                            Module 12: Deploy ứng dụng
+                                            Module 12: Micro Service, Deloy ứng
+                                            dụng
                                         </button>
                                     </h2>
                                     <div
@@ -1082,17 +1107,17 @@
                                         class="btn btn-primary teacher-prev"
                                     >
                                         <i class="fas fa-chevron-left"></i>
-                                        Previous
+                                        
                                     </button>
                                     <button
                                         class="btn btn-primary teacher-next"
                                     >
-                                        Next
+                                    
                                         <i class="fas fa-chevron-right"></i>
                                     </button>
                                 </div>
                             </div>
-                            <p class="description"></p>
+                            <p class="d-md-none description"></p>
                         </div>
                     </div>
 
@@ -1311,7 +1336,7 @@
                         <div class="col-12">
                             <hr class="line" />
                             <h2 class="section-heading">Học phí</h2>
-                            <p class="description"></p>
+                            <p class="d-md-none description"></p>
                         </div>
                     </div>
 
@@ -1417,7 +1442,11 @@
             </section>
 
             <!-- Product -->
-            <section class="section product">
+            <section
+                id="product"
+                class="section product"
+                style="background-image: url(resources/images/bg.jpg)"
+            >
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -1434,153 +1463,163 @@
                                         class="btn btn-primary product-prev"
                                     >
                                         <i class="fas fa-chevron-left"></i>
-                                        Previous
                                     </button>
                                     <button
                                         class="btn btn-primary product-next"
                                     >
-                                        Next
                                         <i class="fas fa-chevron-right"></i>
                                     </button>
                                 </div>
                             </div>
-                            <p class="description"></p>
+                            <p class="d-md-none description"></p>
                         </div>
 
-                        <div class="col-12 overflow-hidden">
-                            <div class="product-slider d-flex">
-                                <div class="slider-item">
-                                    <div class="product-item position-relative">
-                                        <iframe
-                                            width="100%"
-                                            height="600"
-                                            scrolling="no"
-                                            class="lazyload"
-                                            data-src="https://thuqnn.github.io/tg-anime/"
-                                            frameborder="0"
-                                            style="pointer-events: none"
-                                        ></iframe>
-                                        <a
-                                            href="https://thuqnn.github.io/tg-anime/"
-                                            target="_blank"
-                                            style="
-                                                position: absolute;
-                                                top: 0;
-                                                left: 0;
-                                                display: block;
-                                                width: 100%;
-                                                height: 100%;
-                                                z-index: 10;
-                                            "
-                                        ></a>
+                        <div class="col-12">
+                            <div class="overflow-hidden">
+                                <div class="product-slider d-flex">
+                                    <div class="slider-item">
+                                        <div
+                                            class="product-item position-relative"
+                                        >
+                                            <iframe
+                                                width="100%"
+                                                height="600"
+                                                scrolling="no"
+                                                class="lazyload"
+                                                data-src="https://thuqnn.github.io/tg-anime/"
+                                                frameborder="0"
+                                                style="pointer-events: none"
+                                            ></iframe>
+                                            <a
+                                                href="https://thuqnn.github.io/tg-anime/"
+                                                target="_blank"
+                                                style="
+                                                    position: absolute;
+                                                    top: 0;
+                                                    left: 0;
+                                                    display: block;
+                                                    width: 100%;
+                                                    height: 600px;
+                                                    z-index: 10;
+                                                "
+                                            ></a>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="slider-item">
-                                    <div class="product-item position-relative">
-                                        <iframe
-                                            width="100%"
-                                            height="600"
-                                            scrolling="no"
-                                            class="lazyload"
-                                            data-src="https://web.techmaster.vn/obo-stadium/"
-                                            frameborder="0"
-                                            style="pointer-events: none"
-                                        ></iframe>
-                                        <a
-                                            href="https://web.techmaster.vn/obo-stadium/"
-                                            target="_blank"
-                                            style="
-                                                position: absolute;
-                                                top: 0;
-                                                left: 0;
-                                                display: block;
-                                                width: 100%;
-                                                height: 100%;
-                                                z-index: 10;
-                                            "
-                                        ></a>
+                                    <div class="slider-item">
+                                        <div
+                                            class="product-item position-relative"
+                                        >
+                                            <iframe
+                                                width="100%"
+                                                height="600"
+                                                scrolling="no"
+                                                class="lazyload"
+                                                data-src="https://web.techmaster.vn/obo-stadium/"
+                                                frameborder="0"
+                                                style="pointer-events: none"
+                                            ></iframe>
+                                            <a
+                                                href="https://web.techmaster.vn/obo-stadium/"
+                                                target="_blank"
+                                                style="
+                                                    position: absolute;
+                                                    top: 0;
+                                                    left: 0;
+                                                    display: block;
+                                                    width: 100%;
+                                                    height: 600px;
+                                                    z-index: 10;
+                                                "
+                                            ></a>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="slider-item">
-                                    <div class="product-item position-relative">
-                                        <iframe
-                                            width="100%"
-                                            height="600"
-                                            scrolling="no"
-                                            class="lazyload"
-                                            data-src="https://web.techmaster.vn/icecream_shop/"
-                                            frameborder="0"
-                                            style="pointer-events: none"
-                                        ></iframe>
-                                        <a
-                                            href="https://web.techmaster.vn/icecream_shop/"
-                                            target="_blank"
-                                            style="
-                                                position: absolute;
-                                                top: 0;
-                                                left: 0;
-                                                display: block;
-                                                height: 100%;
-                                                width: 100%;
-                                                z-index: 10;
-                                            "
-                                        ></a>
+                                    <div class="slider-item">
+                                        <div
+                                            class="product-item position-relative"
+                                        >
+                                            <iframe
+                                                width="100%"
+                                                height="600"
+                                                scrolling="no"
+                                                class="lazyload"
+                                                data-src="https://web.techmaster.vn/icecream_shop/"
+                                                frameborder="0"
+                                                style="pointer-events: none"
+                                            ></iframe>
+                                            <a
+                                                href="https://web.techmaster.vn/icecream_shop/"
+                                                target="_blank"
+                                                style="
+                                                    position: absolute;
+                                                    top: 0;
+                                                    left: 0;
+                                                    display: block;
+                                                    height: 600px;
+                                                    width: 100%;
+                                                    z-index: 10;
+                                                "
+                                            ></a>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="slider-item">
-                                    <div class="product-item position-relative">
-                                        <iframe
-                                            width="100%"
-                                            height="600"
-                                            scrolling="no"
-                                            class="lazyload"
-                                            data-src="https://web.techmaster.vn/jetro/"
-                                            frameborder="0"
-                                            style="pointer-events: none"
-                                        ></iframe>
-                                        <a
-                                            href="https://web.techmaster.vn/jetro/"
-                                            target="_blank"
-                                            style="
-                                                position: absolute;
-                                                top: 0;
-                                                left: 0;
-                                                display: block;
-                                                width: 100%;
-                                                height: 100%;
-                                                z-index: 10;
-                                            "
-                                        ></a>
+                                    <div class="slider-item">
+                                        <div
+                                            class="product-item position-relative"
+                                        >
+                                            <iframe
+                                                width="100%"
+                                                height="600"
+                                                scrolling="no"
+                                                class="lazyload"
+                                                data-src="https://web.techmaster.vn/jetro/"
+                                                frameborder="0"
+                                                style="pointer-events: none"
+                                            ></iframe>
+                                            <a
+                                                href="https://web.techmaster.vn/jetro/"
+                                                target="_blank"
+                                                style="
+                                                    position: absolute;
+                                                    top: 0;
+                                                    left: 0;
+                                                    display: block;
+                                                    width: 100%;
+                                                    height: 600px;
+                                                    z-index: 10;
+                                                "
+                                            ></a>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="slider-item">
-                                    <div class="product-item position-relative">
-                                        <iframe
-                                            width="100%"
-                                            height="600"
-                                            scrolling="no"
-                                            class="lazyload"
-                                            data-src="https://ducthien94.github.io/Project-Static-Web/"
-                                            frameborder="0"
-                                            style="pointer-events: none"
-                                        ></iframe>
-                                        <a
-                                            href="https://ducthien94.github.io/Project-Static-Web/"
-                                            target="_blank"
-                                            style="
-                                                position: absolute;
-                                                top: 0;
-                                                left: 0;
-                                                display: block;
-                                                width: 100%;
-                                                height: 100%;
-                                                z-index: 10;
-                                            "
-                                        ></a>
+                                    <div class="slider-item">
+                                        <div
+                                            class="product-item position-relative"
+                                        >
+                                            <iframe
+                                                width="100%"
+                                                height="600"
+                                                scrolling="no"
+                                                class="lazyload"
+                                                data-src="https://ducthien94.github.io/Project-Static-Web/"
+                                                frameborder="0"
+                                                style="pointer-events: none"
+                                            ></iframe>
+                                            <a
+                                                href="https://ducthien94.github.io/Project-Static-Web/"
+                                                target="_blank"
+                                                style="
+                                                    position: absolute;
+                                                    top: 0;
+                                                    left: 0;
+                                                    display: block;
+                                                    width: 100%;
+                                                    height: 600px;
+                                                    z-index: 10;
+                                                "
+                                            ></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1690,15 +1729,13 @@
                                 <div class="owl-btn">
                                     <button class="btn btn-primary owl-prev">
                                         <i class="fas fa-chevron-left"></i>
-                                        Previous
                                     </button>
                                     <button class="btn btn-primary owl-next">
-                                        Next
                                         <i class="fas fa-chevron-right"></i>
                                     </button>
                                 </div>
                             </div>
-                            <p class="description"></p>
+                            <p class="d-md-none description"></p>
                         </div>
                     </div>
                     <div class="section-content review-content">
@@ -1864,7 +1901,7 @@
                                     <h3 class="section-heading">
                                         Hình ảnh lớp học
                                     </h3>
-                                    <p class="description"></p>
+                                    <p class="d-md-none description"></p>
                                 </div>
                             </div>
                         </div>
@@ -2104,7 +2141,7 @@
                         <div class="col-12">
                             <hr class="line" />
                             <h2 class="section-heading">Liên hệ tư vấn</h2>
-                            <p class="description"></p>
+                            <p class="d-md-none description"></p>
                         </div>
                     </div>
                     <div class="section-content register-content">
@@ -2381,5 +2418,17 @@
                 fjs.parentNode.insertBefore(js, fjs);
             })(document, "script", "facebook-jssdk");
         </script>
+
+        <!-- Zalo Chat -->
+        <!-- <div
+            class="zalo-chat-widget"
+            data-oaid="579745863508352884"
+            data-welcome-message="Cám ơn bạn đã quan tâm tới khóa học NodeJS."
+            data-autopopup="0"
+            data-width="350"
+            data-height="420"
+        ></div>
+
+        <script src="https://sp.zalo.me/plugins/sdk.js"></script> -->
     </body>
 </html>

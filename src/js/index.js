@@ -105,7 +105,7 @@ $(document).ready(function () {
         infinite: false,
         arrows: false,
         slidesToShow: 1,
-        centerPadding: 30,
+        centerPadding: 0,
     });
 
     const productPrev = document.querySelector(".product-prev");

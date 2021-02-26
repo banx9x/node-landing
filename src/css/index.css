@@ -10,7 +10,7 @@
         --heading: 30px;
         --heading-line-height: 60px;
 
-        --section-padding: 4em;
+        --section-padding: 3.5em;
     }
 }
 
@@ -19,7 +19,7 @@
         --heading: 36px;
         --heading-line-height: 72px;
 
-        --section-padding: 6em;
+        --section-padding: 5em;
     }
 }
 
@@ -28,7 +28,7 @@
         --heading: 40px;
         --heading-line-height: 80px;
 
-        --section-padding: 8em;
+        /* --section-padding: 8em; */
     }
 }
 
@@ -116,6 +116,10 @@ svg[class*="fa"] {
     color: #fff;
 }
 
+.intro-image {
+    margin-bottom: 3em;
+}
+
 @media (min-width: 768px) {
     .intro-content {
         padding-top: 4rem;
@@ -137,12 +141,12 @@ svg[class*="fa"] {
     }
 }
 
-@media (min-width: 1400px) {
+/* @media (min-width: 1400px) {
     .intro-content {
         padding-top: 10rem;
         padding-bottom: 10rem;
     }
-}
+} */
 
 .intro-content .heading {
     font-size: 24px;
@@ -183,6 +187,27 @@ svg[class*="fa"] {
     border-radius: 20px !important;
     color: #92d528;
     background-color: #fff;
+}
+
+.btn-outline-primary {
+    color: #92d528 !important;
+    background-color: #fff;
+    border-color: #92d528;
+}
+
+.btn-outline-primary:hover {
+    color: #fff !important;
+    background-color: #92d528;
+    border-color: #92d528;
+}
+
+.btn-outline-primary:focus {
+    box-shadow: 0 0 0.15em #93d5289a;
+}
+
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: #92d528;
 }
 
 .intro-content .btn {
@@ -241,9 +266,9 @@ svg[class*="fa"] {
     right: 25px;
     width: 60px;
     height: 60px;
-    background-color: #54dbbe;
+    background-color: #6b28d5;
     border-radius: 50%;
-    color: #db5471;
+    color: #fff;
     font-size: 30px;
     display: flex;
     align-items: center;
@@ -258,11 +283,11 @@ svg[class*="fa"] {
 
 @keyframes wave {
     from {
-        box-shadow: 0 0 0 0px rgba(225, 225, 225, 1);
+        box-shadow: 0 0 0 0px rgba(107, 40, 213, 0.5);
     }
 
     to {
-        box-shadow: 0 0 0 15px rgba(225, 225, 225, 0);
+        box-shadow: 0 0 0 15px rgba(107, 40, 213, 0);
     }
 }
 
@@ -392,11 +417,6 @@ svg[class*="fa"] {
     border: 0;
 }
 
-/* Fee */
-.fee {
-    /* background-color: #28d5c233; */
-}
-
 .fee-item {
     background-color: #ffffff;
     box-shadow: 0 10px 25px rgb(0, 0, 0, 0.075);
@@ -514,13 +534,6 @@ svg[class*="fa"] {
 .review .owl-nav {
     display: none;
 }
-.review hr + div button,
-.teacher-next,
-.teacher-prev,
-.product-prev,
-.product-next {
-    border-radius: 20px;
-}
 
 .review hr + div button,
 .teacher-next,
@@ -528,13 +541,17 @@ svg[class*="fa"] {
 .product-prev,
 .product-next {
     background-color: #fff;
-    border-color: #6b28d5;
-    color: #6b28d5;
+    border-color: #92d528;
+    color: #92d528;
     border-radius: 20px;
     font-size: 0.9em;
 }
 
-.review hr + div button svg {
+.review hr + div button svg,
+.teacher-next svg,
+.teacher-prev svg,
+.product-prev svg,
+.product-next svg {
     color: inherit !important;
 }
 
@@ -543,9 +560,9 @@ svg[class*="fa"] {
 .teacher-prev:hover,
 .product-prev:hover,
 .product-next:hover {
-    background-color: #6b28d5 !important;
+    background-color: #92d528 !important;
     color: #fff !important;
-    border-color: #6b28d5 !important;
+    border-color: #92d528 !important;
 }
 .review hr + div button:focus,
 .teacher-next:focus,
@@ -553,7 +570,8 @@ svg[class*="fa"] {
 .product-prev:focus,
 .product-next:focus {
     box-shadow: none;
-    background-color: #6b28d5;
+    background-color: #92d528;
+    border-color: #92d528;
 }
 
 .review-item {
@@ -843,8 +861,14 @@ iframe {
 
 #btn-register {
     margin-top: 1rem;
-    background-color: #6b28d5;
-    border-color: #6b28d5;
+    background-color: #92d528;
+    border-color: #92d528;
+    color: #fff;
+}
+
+#btn-register:hover {
+    background-color: #fff;
+    color: #92d528;
 }
 
 .address-title {
@@ -965,5 +989,17 @@ iframe {
 }
 
 .product .slider-item {
-    padding: 0 3em;
+    margin-right: 3em;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28248, 240, 240, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-light .navbar-toggler {
+    border-color: rgb(248, 240, 240);
+}
+
+.navbar-light .navbar-toggler:focus {
+    box-shadow: 0 0 0 0.15rem #fff;
 }
