@@ -124,13 +124,13 @@ $(document).ready(function () {
         slidesToShow: 3,
         centerMode: true,
         centerPadding: 30,
-        initialSlide: 1,
         responsive: [
             {
                 breakpoint: 992,
                 settings: {
                     arrows: false,
                     slidesToShow: 2,
+                    initialSlide: 1,
                 },
             },
             {
@@ -138,6 +138,7 @@ $(document).ready(function () {
                 settings: {
                     arrows: false,
                     slidesToShow: 1,
+                    initialSlide: 1,
                 },
             },
         ],
