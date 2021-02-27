@@ -115,6 +115,41 @@ $(document).ready(function () {
         product.slick("slickPrev");
     });
     productNext.addEventListener("click", () => product.slick("slickNext"));
+
+    const fee = $(".fee-slider");
+
+    fee.slick({
+        infinite: false,
+        arrows: false,
+        slidesToShow: 3,
+        centerMode: true,
+        centerPadding: 30,
+        initialSlide: 1,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 2,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 1,
+                },
+            },
+        ],
+    });
+
+    const feePrev = document.querySelector(".fee-prev");
+    const feeNext = document.querySelector(".fee-next");
+
+    feePrev.addEventListener("click", () => {
+        fee.slick("slickPrev");
+    });
+    feeNext.addEventListener("click", () => fee.slick("slickNext"));
 });
 
 // Register
@@ -290,4 +325,40 @@ $(document).ready(function () {
             $("#btn-load-image").remove();
         }
     });
+});
+
+$(function () {
+    const nav = document.getElementById("nav");
+    const header = document.getElementById("page-header");
+
+    window.onscroll = function () {
+        if (
+            document.body.scrollTop > header.offsetHeight ||
+            document.documentElement.scrollTop > header.offsetHeight
+        ) {
+            nav.style.cssText = `
+                position: fixed;
+                width: 100%;
+                top: 0;
+                left: 0;
+                background-color: #6b28d5;
+                padding: 0;
+                z-index: 10000;
+                animation: flydown 0.3s;
+            `;
+
+            header.style.cssText = `
+                padding-top: 90px;
+            `;
+        } else {
+            nav.style.cssText = `
+                position: "";
+                padding: "";
+                background-color: "";
+            `;
+            header.style.cssText = `
+                padding-top: 0;
+            `;
+        }
+    };
 });

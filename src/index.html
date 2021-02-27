@@ -69,8 +69,8 @@
     <body>
         <!-- Header -->
         <header id="page-header" class="page-header">
-            <div class="container">
-                <nav class="navbar navbar-expand-lg navbar-light">
+            <nav id="nav" class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
                     <a class="navbar-brand" href="/">
                         <img
                             class="logo"
@@ -103,13 +103,13 @@
                                 <a class="nav-link" href="#track">Nội dung</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#product"
-                                    >Sản phẩm học viên</a
+                                <a class="nav-link" href="#teacher"
+                                    >Giảng viên</a
                                 >
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#teacher"
-                                    >Giảng viên</a
+                                <a class="nav-link" href="#product"
+                                    >Sản phẩm học viên</a
                                 >
                             </li>
                             <li class="nav-item">
@@ -117,14 +117,17 @@
                             </li>
                         </ul>
                     </div>
-                </nav>
+                </div>
+            </nav>
 
-                <div class="intro">
-                    <div class="row intro-container">
+            <div class="intro">
+                <div class="container">
+                    <div class="row intro-container align-items-center">
                         <div class="col-12 col-lg-6">
                             <div class="intro-content">
                                 <h1 class="heading">
-                                    Lập trình Web NodeJS
+                                    Lập trình Web Frontend, Backend, REST API,
+                                    Microservices với JavaScript
                                     <span
                                         class="d-flex align-items-center fly-text"
                                         >MERN Stack
@@ -140,8 +143,8 @@
                                 <p class="description">
                                     Giảng dạy chuyên nghiệp, kiến thức thực tế
                                     và cam kết việc làm sau khi tốt nghiệp
-                                    <br>
-                                    LH Tư vấn nhanh: 0382416368 (Ms. Hương)
+                                    <br />
+                                    Tư vấn nhanh: 0382416368 (Ms. Hương)
                                 </p>
                                 <!-- <a
                                     href="#register"
@@ -160,7 +163,7 @@
                                     class="btn btn-lg btn-primary"
                                 >
                                     <i class="far fa-paper-plane"></i>
-                                    Đăng ký tư vấn
+                                    Đăng ký nhận tài liệu khóa học
                                 </a>
                             </div>
                         </div>
@@ -190,7 +193,7 @@
                                 <strong>Techmaster</strong> là công ty đào tạo
                                 tin học có trên 10 năm kinh nghiệm đào tạo, tư
                                 vấn, triển khai giải pháp phần mềm cho các doanh
-                                nghiệp như FPT, Viettel, VNPT, BIDV, ...
+                                nghiệp như FPT, Viettel, VNPT, BIDV
                             </p>
                         </div>
                     </div>
@@ -529,6 +532,94 @@
                                 <div class="accordion-item">
                                     <h2
                                         class="accordion-header"
+                                        id="headingTwo"
+                                    >
+                                        <button
+                                            class="accordion-button collapsed"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseTwo"
+                                            aria-expanded="false"
+                                            aria-controls="collapseTwo"
+                                        >
+                                            Module 3: React Căn bản
+                                        </button>
+                                    </h2>
+                                    <div
+                                        id="collapseTwo"
+                                        class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo"
+                                        data-bs-parent="#accordionExample"
+                                    >
+                                        <div class="accordion-body">
+                                            <p>
+                                                <i class="fas fa-check"></i> Giới thiệu và cài đặt ReactJS, khởi tạo project
+                                            </p>
+                                            <p>
+                                                <i class="fas fa-check"></i> Giới thiệu và làm quen với cú pháp JSX
+                                            </p>
+                                            <p>
+                                                <i class="fas fa-check"></i>
+                                                Props, State, Component trong React
+                                            </p>
+                                            <p>
+                                                <i class="fas fa-check"></i> Xử lý sự kiện
+                                            </p>
+                                            <p>
+                                                <i class="fas fa-check"></i> Truyền dữ liệu giữa các component
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2
+                                        class="accordion-header"
+                                        id="headingTwo"
+                                    >
+                                        <button
+                                            class="accordion-button collapsed"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseTwo"
+                                            aria-expanded="false"
+                                            aria-controls="collapseTwo"
+                                        >
+                                            Module 4: React JS Nâng cao
+                                        </button>
+                                    </h2>
+                                    <div
+                                        id="collapseTwo"
+                                        class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo"
+                                        data-bs-parent="#accordionExample"
+                                    >
+                                        <div class="accordion-body">
+                                            <p>
+                                                <i class="fas fa-check"></i> React Component life cycle
+                                            </p>
+                                            <p>
+                                                <i class="fas fa-check"></i> React Hook
+                                            </p>
+                                            <p>
+                                                <i class="fas fa-check"></i>
+                                                Kết nối API, render giao diện
+                                            </p>
+                                            <p>
+                                                <i class="fas fa-check"></i> Giới thiệu Redux, ứng dụng Redux vào React App
+                                            </p>
+                                            <p>
+                                                <i class="fas fa-check"></i> Giới thiệu Next.js, SSR
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="accordion-item">
+                                    <h2
+                                        class="accordion-header"
                                         id="headingThree"
                                     >
                                         <button
@@ -539,7 +630,7 @@
                                             aria-expanded="false"
                                             aria-controls="collapseThree"
                                         >
-                                            Module 3: NodeJS Căn bản
+                                            Module 5: NodeJS Căn bản
                                         </button>
                                     </h2>
                                     <div
@@ -589,7 +680,7 @@
                                             aria-expanded="false"
                                             aria-controls="collapseFour"
                                         >
-                                            Module 4: NodeJS Nâng cao
+                                            Module 6: NodeJS Nâng cao
                                         </button>
                                     </h2>
                                     <div
@@ -647,7 +738,7 @@
                                             aria-expanded="false"
                                             aria-controls="collapseFive"
                                         >
-                                            Module 5: ExpressJS Căn bản
+                                            Module 7: Tổng quan về ExpressJS
                                         </button>
                                     </h2>
                                     <div
@@ -704,7 +795,7 @@
                                             aria-expanded="false"
                                             aria-controls="collapseSix"
                                         >
-                                            Module 6: ExpressJS Nâng cao
+                                            Module 8: Middleware - ExpressJS Nâng cao
                                         </button>
                                     </h2>
                                     <div
@@ -752,7 +843,7 @@
                                             aria-expanded="false"
                                             aria-controls="collapseSeven"
                                         >
-                                            Module 7: MongoDB
+                                            Module 9: MongoDB
                                         </button>
                                     </h2>
                                     <div
@@ -801,7 +892,7 @@
                                             aria-expanded="false"
                                             aria-controls="collapseEight"
                                         >
-                                            Module 8: NodeJS vs MongoDB
+                                            Module 10: NodeJS vs MongoDB, Mongoose
                                         </button>
                                     </h2>
                                     <div
@@ -874,7 +965,7 @@
                                             aria-expanded="false"
                                             aria-controls="collapseNine"
                                         >
-                                            Module 9: Express - Template Engine
+                                            Module 11: ExpressJS - Template Engine, Handle Error
                                         </button>
                                     </h2>
                                     <div
@@ -928,7 +1019,7 @@
                                             aria-expanded="false"
                                             aria-controls="collapseTen"
                                         >
-                                            Module 10: ExpressJS - Security
+                                            Module 12: ExpressJS - Authentication, Authorization và Security
                                         </button>
                                     </h2>
                                     <div
@@ -949,12 +1040,16 @@
                                             </p>
                                             <p>
                                                 <i class="fas fa-check"></i>
+                                                Project Routes
+                                            </p>
+                                            <p>
+                                                <i class="fas fa-check"></i>
                                                 Phân quyền sử dụng Middleware
                                             </p>
                                             <p>
                                                 <i class="fas fa-check"></i>
                                                 Xây dựng chức năng Reset
-                                                password,
+                                                password, reset token
                                             </p>
                                             <p>
                                                 <i class="fas fa-check"></i>
@@ -981,8 +1076,7 @@
                                             aria-expanded="false"
                                             aria-controls="collapseEleven"
                                         >
-                                            Module 11: ExpressJS - Upload
-                                            multi-file, Service mail
+                                            Module 13: ExpressJS - Payment, Email, File Uploads
                                         </button>
                                     </h2>
                                     <div
@@ -1018,7 +1112,7 @@
                                             </p>
                                             <p>
                                                 <i class="fas fa-check"></i>
-                                                Email template vs pug
+                                                Email template vs Pug
                                             </p>
                                             <p>
                                                 <i class="fas fa-check"></i> Gửi
@@ -1045,7 +1139,7 @@
                                             aria-expanded="false"
                                             aria-controls="collapseTwelve"
                                         >
-                                            Module 12: Micro Service, Deloy ứng
+                                            Module 14: Micro Service, Deloy ứng
                                             dụng
                                         </button>
                                     </h2>
@@ -1096,7 +1190,7 @@
                         <div class="col-12">
                             <hr class="line" />
                             <div
-                                class="d-flex flex-column flex-md-row justify-content-between align-items-md-center"
+                                class="d-flex flex-column flex-md-row align-items-md-center"
                             >
                                 <h2 class="section-heading">
                                     Đội ngũ giảng viên
@@ -1107,12 +1201,10 @@
                                         class="btn btn-primary teacher-prev"
                                     >
                                         <i class="fas fa-chevron-left"></i>
-                                        
                                     </button>
                                     <button
                                         class="btn btn-primary teacher-next"
                                     >
-                                    
                                         <i class="fas fa-chevron-right"></i>
                                     </button>
                                 </div>
@@ -1335,15 +1427,34 @@
                     <div class="row">
                         <div class="col-12">
                             <hr class="line" />
-                            <h2 class="section-heading">Học phí</h2>
+                            <div
+                                class="d-flex flex-column flex-md-row align-items-md-center"
+                            >
+                                <h2 class="section-heading">
+                                    Học phí
+                                </h2>
+
+                                <div class="owl-btn d-lg-none">
+                                    <button
+                                        class="btn btn-primary fee-prev"
+                                    >
+                                        <i class="fas fa-chevron-left"></i>
+                                    </button>
+                                    <button
+                                        class="btn btn-primary fee-next"
+                                    >
+                                        <i class="fas fa-chevron-right"></i>
+                                    </button>
+                                </div>
+                            </div>
                             <p class="d-md-none description"></p>
                         </div>
                     </div>
 
                     <div class="section-content fee-content">
-                        <div class="fee-slider">
-                            <div class="row gy-5 gx-5">
-                                <div class="col-12 col-lg-4">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="fee-slider">
                                     <div class="slider-item">
                                         <div class="fee-item">
                                             <div class="fee-header">
@@ -1372,9 +1483,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="col-12 col-lg-4">
                                     <div class="slider-item">
                                         <div class="fee-item main">
                                             <div class="fee-header">
@@ -1403,9 +1512,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="col-12 col-lg-4">
                                     <div class="slider-item">
                                         <div class="fee-item">
                                             <div class="fee-header">
@@ -1452,7 +1559,7 @@
                         <div class="col-12">
                             <hr class="line" />
                             <div
-                                class="d-flex flex-column flex-md-row justify-content-between align-items-md-center"
+                                class="d-flex flex-column flex-md-row align-items-md-center"
                             >
                                 <h2 class="section-heading">
                                     Sản phẩm học viên
@@ -1720,7 +1827,7 @@
                         <div class="col-12">
                             <hr class="line" />
                             <div
-                                class="d-flex flex-column flex-md-row justify-content-between align-items-md-center"
+                                class="d-flex flex-column flex-md-row align-items-md-center"
                             >
                                 <h2 class="section-heading">
                                     Cảm nhận của học viên
@@ -2388,6 +2495,7 @@
             logged_in_greeting="Cám ơn bạn đã quan tâm tới khóa học NodeJS"
             greeting_dialog_display="show"
             greeting_dialog_delay="2"
+            theme_color="#6b28d5"
         ></div>
 
         <script>
