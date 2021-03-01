@@ -42,7 +42,6 @@ $(document).ready(function () {
         items: 2,
         center: false,
         stagePadding: 0,
-        loop: true,
         responsive: {
             0: {
                 stagePadding: 0,

@@ -47,7 +47,15 @@ img {
 }
 
 svg[class*="fa"] {
-    color: #01b0f1;
+    color: #6b28d5;
+}
+
+.supporter-item {
+    margin-bottom: 1em;
+}
+
+.supporter a {
+    text-decoration: none;
 }
 
 .fa-question {
