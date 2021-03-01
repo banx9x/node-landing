@@ -71,6 +71,7 @@ $(document).ready(function () {
         arrows: false,
         slidesToShow: 3,
         slidesToScroll: 1,
+        initialSlide: 1,
         centerMode: true,
         centerPadding: 30,
         responsive: [
@@ -86,6 +87,7 @@ $(document).ready(function () {
                 settings: {
                     arrows: false,
                     slidesToShow: 1,
+                    initialSlide: 0,
                 },
             },
         ],
