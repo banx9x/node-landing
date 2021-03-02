@@ -16,13 +16,11 @@ particlesJS.load(
             width: 100%;
             height: 100%;
             z-index: -1;
-            background-color: #6b28d5;
+            background-color: #7051EF;
         `;
-        console.log("Sao không được?");
     }
 );
 
-import "./active-menu.js";
 import flyText from "./intro-text.js";
 flyText(".intro-content .wrapper");
 
@@ -33,7 +31,7 @@ import "owl.carousel";
 
 import "slick-carousel";
 // Review
-$(document).ready(function () {
+$(function () {
     const owl = $(".review-slider");
 
     owl.owlCarousel({
@@ -159,8 +157,15 @@ document.getElementById("btn-register").addEventListener(
     "click",
     (function (e) {
         const name = document.getElementById("name");
+        const nameMessage = document.querySelector("#name ~ .invalid-feedback");
         const phone = document.getElementById("phone");
+        const phoneMessage = document.querySelector(
+            "#phone ~ .invalid-feedback"
+        );
         const email = document.getElementById("email");
+        const emailMessage = document.querySelector(
+            "#email ~ .invalid-feedback"
+        );
         const note = document.getElementById("note");
         const success = document.getElementById("success");
         const error = document.getElementById("error");
@@ -168,17 +173,28 @@ document.getElementById("btn-register").addEventListener(
 
         function checkValid() {
             let valid = true;
-            if (name.value.trim() == "") {
+            const nameVal = name.value.replaceAll(" ", "");
+            const phoneVal = phone.value.replaceAll(" ", "");
+            const emailVal = email.value.replaceAll(" ", "");
+
+            if (nameVal == "") {
+                nameMessage.textContent = "Vui lòng nhập tên của bạn";
                 name.classList.remove("is-valid");
                 name.classList.add("is-invalid");
-
                 valid = false;
             } else {
                 name.classList.remove("is-invalid");
                 name.classList.add("is-valid");
             }
 
-            if (phone.value.trim() == "") {
+            if (phoneVal == "") {
+                phoneMessage.textContent = "Vui lòng nhập số điện thoại";
+                phone.classList.remove("is-valid");
+                phone.classList.add("is-invalid");
+
+                valid = false;
+            } else if (phoneVal.length < 10 || /[^0-9+]/.test(phoneVal)) {
+                phoneMessage.textContent = "Số điện thoại có vẻ chưa đúng";
                 phone.classList.remove("is-valid");
                 phone.classList.add("is-invalid");
 
@@ -188,7 +204,19 @@ document.getElementById("btn-register").addEventListener(
                 phone.classList.add("is-valid");
             }
 
-            if (email.value.trim() == "") {
+            if (emailVal == "") {
+                emailMessage.textContent =
+                    "Vui lòng nhập địa chỉ email để nhận tài liệu khóa học";
+                email.classList.remove("is-valid");
+                email.classList.add("is-invalid");
+
+                valid = false;
+            } else if (
+                !/^[a-z][a-z0-9_\.]{1,}@[a-z0-9]{1,}(\.[a-z0-9]{2,4}){1,2}$/gi.test(
+                    emailVal
+                )
+            ) {
+                emailMessage.textContent = "Địa chỉ email có vẻ chưa đúng";
                 email.classList.remove("is-valid");
                 email.classList.add("is-invalid");
 
@@ -208,10 +236,10 @@ document.getElementById("btn-register").addEventListener(
             if (checkValid()) {
                 const btn = $(this);
 
-                let nameVal = name.value;
-                let phoneVal = phone.value;
-                let emailVal = email.value;
-                let noteVal = note.value;
+                let nameVal = name.value.replaceAll(" ", "");
+                let phoneVal = phone.value.replaceAll(" ", "");
+                let emailVal = email.value.replaceAll(" ", "");
+                let noteVal = note.value.trim();
 
                 let req = {
                     FullName: nameVal,
@@ -257,7 +285,7 @@ import "lazysizes";
 import "@fancyapps/fancybox";
 import "@fancyapps/fancybox/dist/jquery.fancybox.min.css";
 
-$(document).ready(function () {
+$(function () {
     let images = [
         {
             link: "resources/images/hd-13.webp",
@@ -343,10 +371,9 @@ $(function () {
                 width: 100%;
                 top: 0;
                 left: 0;
-                background-color: #6b28d5;
-                padding: 0;
+                background-color: #7051EF;
                 z-index: 10000;
-                animation: flydown 0.3s;
+                animation: flydown 1s;
             `;
 
             header.style.cssText = `
@@ -355,7 +382,6 @@ $(function () {
         } else {
             nav.style.cssText = `
                 position: "";
-                padding: "";
                 background-color: "";
             `;
             header.style.cssText = `
@@ -364,3 +390,65 @@ $(function () {
         }
     };
 });
+
+import "./active-menu.js";
+
+import "../images/1.png";
+import "../images/1.webp";
+import "../images/2.webp";
+import "../images/3.webp";
+import "../images/4.webp";
+import "../images/5.webp";
+import "../images/6.webp";
+import "../images/7.webp";
+import "../images/about1.png";
+import "../images/about2.png";
+import "../images/about3.png";
+import "../images/about4.png";
+import "../images/favicon.png";
+import "../images/bg.jpg";
+import "../images/ba.webp";
+import "../images/cuong.jpg";
+import "../images/express.webp";
+import "../images/faq.jpg";
+
+import "../images/hd-01.webp";
+import "../images/hd-02.webp";
+import "../images/hd-03.webp";
+import "../images/hd-04.webp";
+import "../images/hd-05.webp";
+import "../images/hd-06.webp";
+import "../images/hd-07.webp";
+import "../images/hd-08.webp";
+import "../images/hd-09.webp";
+import "../images/hd-10.webp";
+import "../images/hd-11.webp";
+import "../images/hd-12.webp";
+import "../images/hd-13.webp";
+import "../images/hd-14.webp";
+import "../images/hd-15.webp";
+import "../images/hd-16.webp";
+import "../images/hd-17.webp";
+import "../images/hd-18.webp";
+import "../images/hd-19.webp";
+import "../images/hd-20.webp";
+import "../images/hd-21.webp";
+
+import "../images/hien.png";
+import "../images/huong.jpg";
+import "../images/huy.png";
+import "../images/intro.png";
+import "../images/logo.png";
+import "../images/man.png";
+import "../images/mongo.webp";
+import "../images/nam.webp";
+import "../images/nguyen-huy-cuong.webp";
+import "../images/node.webp";
+import "../images/nodejs.png";
+import "../images/og.png";
+import "../images/quynh.png";
+import "../images/react.webp";
+import "../images/techmaster-white2.png";
+import "../images/thumbnail.webp";
+import "../images/vo-xuan-hai.webp";
+import "../images/zalo.png";

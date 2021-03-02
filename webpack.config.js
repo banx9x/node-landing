@@ -3,7 +3,6 @@ const webpack = require("webpack");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
-const CopyPlugin = require("copy-webpack-plugin");
 
 const TerserPlugin = require("terser-webpack-plugin");
 
@@ -16,12 +15,10 @@ const PATHS = {
 };
 
 module.exports = (env) => {
-    // use to check environment
     const prod = env.production;
 
     return {
         entry: {
-            // TODO
             index: "./src/js/index.js",
         },
         output: {
@@ -29,7 +26,6 @@ module.exports = (env) => {
                 ? "resources/js/[name].[contenthash].js"
                 : "resources/js/[name].js",
             path: path.join(__dirname, "build"),
-            publicPath: "",
         },
         module: {
             rules: [
@@ -37,24 +33,6 @@ module.exports = (env) => {
                     test: /\.js$/,
                     exclude: [path.join(__dirname, "node_modules")],
                     use: ["babel-loader"],
-                },
-                {
-                    test: /\.(s[ac]ss)$/,
-                    use: [
-                        {
-                            loader: MiniCssExtractPlugin.loader,
-                            options: { publicPath: "" },
-                        },
-                        {
-                            loader: "css-loader",
-                        },
-                        {
-                            loader: "postcss-loader",
-                        },
-                        {
-                            loader: "sass-loader",
-                        },
-                    ],
                 },
                 {
                     test: /\.css$/i,
@@ -65,15 +43,6 @@ module.exports = (env) => {
                         { loader: "css-loader" },
                         { loader: "postcss-loader" },
                     ],
-                },
-                {
-                    test: /\.(woff|woff2|eot|ttf|otf)$/i,
-                    use: {
-                        loader: "file-loader",
-                        options: {
-                            name: "resources/fonts/[name].[ext]",
-                        },
-                    },
                 },
                 {
                     test: /\.(png|svg|jpg|jpeg|webp|gif)$/i,
@@ -107,21 +76,6 @@ module.exports = (env) => {
             }),
             new PurgeCSSPlugin({
                 paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
-            }),
-            new CopyPlugin({
-                patterns: [
-                    {
-                        from: "./src/images/",
-                        to: "resources/images/",
-                    },
-                    {
-                        from: "./src/assets/particlesjs-config.json",
-                        to: "resources/assets/",
-                    },
-                ],
-                options: {
-                    concurrency: 100,
-                },
             }),
             new webpack.ProvidePlugin({
                 $: "jquery",

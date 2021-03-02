@@ -20,7 +20,7 @@
         }
     });
 
-    const homeNav = document.querySelector(".nav-link[href='/']");
+    const homeNav = document.querySelector(".nav-link[href='#']");
     const trackNav = document.querySelector(".nav-link[href='#track']");
     const teacherNav = document.querySelector(".nav-link[href='#teacher']");
     const productNav = document.querySelector(".nav-link[href='#product']");
@@ -42,6 +42,7 @@
     let pos = "home";
 
     window.addEventListener("scroll", function () {
+        console.log("LoL");
         let offset = window.pageYOffset;
         if (offset > register) {
             pos != "register" &&

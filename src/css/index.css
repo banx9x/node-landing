@@ -39,7 +39,7 @@ body {
         "Noto Color Emoji";
     color: #1a133b;
     line-height: 1.8;
-    background-color: #ffffff;
+    background-color: #fdfdfd;
 }
 
 img {
@@ -47,7 +47,11 @@ img {
 }
 
 svg[class*="fa"] {
-    color: #6b28d5;
+    color: #7051ef;
+}
+
+svg[class*="fa-quote"] {
+    color: #7baf28;
 }
 
 .supporter-item {
@@ -118,19 +122,39 @@ svg[class*="fa"] {
     transition: all 0.3s;
 }
 
+.page-header .nav-item {
+    margin-right: 1em;
+    margin-left: 1em;
+}
+
 .page-header .nav-link {
     font-weight: 700;
     color: #fff !important;
     font-size: 1em;
     transition: color 0.2s;
-    padding-left: 1em !important;
-    padding-right: 1em !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-bottom: 0 !important;
     text-transform: uppercase;
+    position: relative;
 }
 
-.page-header .nav-link:hover,
-.page-header .nav-link.active {
-    color: #7baf28 !important;
+.page-header .nav-link::after,
+.page-header .nav-link::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.5s;
+}
+
+.page-header .nav-link:hover::after,
+.page-header .nav-link.active::after {
+    width: 100%;
 }
 
 /* Intro */
@@ -198,7 +222,6 @@ svg[class*="fa"] {
     display: block;
     line-height: inherit;
     font-weight: 800;
-    transition: all 0.3s;
     text-align: center;
     color: #7baf28;
 }
@@ -209,37 +232,37 @@ svg[class*="fa"] {
 
 .btn-primary {
     font-size: 20px;
-    border-radius: 20px !important;
-    color: #7baf28;
+    border-radius: 5px !important;
+    color: #7051ef;
     background-color: #fff;
 }
 
 .btn-outline-primary {
-    color: #7baf28 !important;
+    color: #7051ef !important;
     background-color: #fff;
-    border-color: #7baf28;
+    border-color: #7051ef;
 }
 
 .btn-outline-primary:hover {
     color: #fff !important;
-    background-color: #7baf28;
-    border-color: #7baf28;
+    background-color: #7051ef;
+    border-color: #7051ef;
 }
 
 .btn-outline-primary:focus {
-    box-shadow: 0 0 0.15em #93d5289a;
+    box-shadow: 0 0 0.15em #7151efb6;
 }
 
 .btn-outline-primary:hover {
     color: #fff;
-    background-color: #7baf28;
+    background-color: #7051ef;
 }
 
 .intro-content .btn {
     padding: 0.7em 1em;
     background-color: #fff;
     border-color: #fff;
-    color: #7baf28;
+    color: #7051ef;
     font-weight: 700;
 }
 
@@ -291,7 +314,7 @@ svg[class*="fa"] {
     right: 25px;
     width: 60px;
     height: 60px;
-    background-color: #6b28d5;
+    background-color: #7051ef;
     border-radius: 50%;
     color: #fff;
     font-size: 30px;
@@ -365,17 +388,17 @@ svg[class*="fa"] {
 }
 
 .about-item {
-    background-color: #6b28d5;
+    background-color: #fff;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.075);
-    border-radius: 20px;
+    border-radius: 5px;
     padding: 3em 2em;
     transition: all 0.3s;
-    color: #fff;
+    color: inherit;
 }
 
 .about-item:hover {
-    background-color: #fff;
-    color: inherit;
+    background-color: #7051ef;
+    color: #fff;
 }
 
 .about-image {
@@ -402,7 +425,7 @@ svg[class*="fa"] {
 .mern-item {
     background-color: #fff;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.075);
-    border-radius: 20px;
+    border-radius: 5px;
     padding: 2em;
 }
 
@@ -432,14 +455,14 @@ svg[class*="fa"] {
 .accordion-button {
     border: 0;
     background-color: #f6eeee;
-    border-radius: 10px !important;
+    border-radius: 5px !important;
     font-size: 20px;
     padding-top: 1em;
     padding-bottom: 1em;
 }
 
 .accordion-button:not(.collapsed) {
-    background-color: #6b28d5;
+    background-color: #7051ef;
     color: #fff;
 }
 .accordion-button:not(.collapsed)::after {
@@ -473,14 +496,14 @@ svg[class*="fa"] {
 .fee-item {
     background-color: #ffffff;
     box-shadow: 0 10px 25px rgb(0, 0, 0, 0.075);
-    border-radius: 20px;
+    border-radius: 5px;
     overflow: hidden;
 }
 
 .fee-header {
     padding: 1rem;
     text-align: center;
-    background-color: #6b28d5;
+    background-color: #7051ef;
     color: #ffffff;
 }
 
@@ -525,21 +548,21 @@ svg[class*="fa"] {
 }
 
 .fee-item .btn {
-    background-color: #6b28d5;
-    border-color: #6b28d5;
+    background-color: #7051ef;
+    border-color: #7051ef;
     text-transform: uppercase;
     font-size: 1em;
     margin-top: 1em;
     margin-bottom: 1em;
     color: #fff;
-    border-radius: 20px;
+    border-radius: 5px;
     transition: all 0.3s;
     padding: 0.7em 2em;
 }
 
 .fee-item .btn:hover {
     background-color: #fff;
-    color: #6b28d5;
+    color: #7051ef;
 }
 
 /* FAQ */
@@ -552,7 +575,7 @@ svg[class*="fa"] {
     padding: 1.5rem;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.075);
     height: 100%;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 /* Review */
@@ -597,9 +620,9 @@ svg[class*="fa"] {
 .fee-next,
 .fee-prev {
     background-color: #fff;
-    border-color: #7baf28;
-    color: #7baf28;
-    border-radius: 20px;
+    border-color: #7051ef;
+    color: #7051ef;
+    border-radius: 5px;
     font-size: 0.9em;
 }
 
@@ -620,9 +643,9 @@ svg[class*="fa"] {
 .product-next:hover,
 .fee-next:hover,
 .fee-prev:hover {
-    background-color: #7baf28 !important;
+    background-color: #7051ef !important;
     color: #fff !important;
-    border-color: #7baf28 !important;
+    border-color: #7051ef !important;
 }
 .review hr + div button:focus,
 .teacher-next:focus,
@@ -632,14 +655,14 @@ svg[class*="fa"] {
 .fee-next:focus,
 .fee-prev:focus {
     box-shadow: none;
-    background-color: #7baf28;
-    border-color: #7baf28;
+    background-color: #7051ef;
+    border-color: #7051ef;
 }
 
 .review-item {
     background-color: #ffffff;
     opacity: 1;
-    border-radius: 20px;
+    border-radius: 5px;
     box-shadow: rgb(0, 0, 0, 0.075);
     transition: all 0.3s;
     padding: 1rem;
@@ -882,7 +905,7 @@ svg[class*="fa"] {
     background-color: #ffffff;
     padding: 2em;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.075);
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 .form .row {
@@ -891,12 +914,12 @@ svg[class*="fa"] {
 
 .form-control {
     border: 1px solid rgb(2, 3, 3, 0.1);
-    border-radius: 10px;
+    border-radius: 5px;
     resize: none;
 }
 
 .form .btn-contact {
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .form svg {
@@ -905,7 +928,7 @@ svg[class*="fa"] {
 
 iframe {
     border: 0;
-    border-radius: 8px;
+    border-radius: 0;
 }
 
 .address-item {
@@ -923,14 +946,15 @@ iframe {
 
 #btn-register {
     margin-top: 1rem;
-    background-color: #7baf28;
-    border-color: #7baf28;
+    margin-right: 1rem;
+    background-color: #7051ef;
+    border-color: #7051ef;
     color: #fff;
 }
 
 #btn-register:hover {
     background-color: #fff;
-    color: #7baf28;
+    color: #7051ef;
 }
 
 .address-title {
@@ -1019,7 +1043,7 @@ iframe {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 25px;
+    border-radius: 5px;
     box-shadow: 0 10px 25px rgb(0, 0, 0, 0.075);
 }
 
@@ -1040,7 +1064,7 @@ iframe {
 }
 
 .teacher-sub {
-    color: #01b0f1;
+    color: #7051ef;
 }
 
 /* Product */
@@ -1066,11 +1090,11 @@ iframe {
     box-shadow: 0 0 0 0.15rem #fff;
 }
 
-.btn-load-image {
+/* .btn-load-image {
     color: #1a133b !important;
     border-color: #1a133b;
 }
 
 .btn-load-image:focus {
     box-shadow: 0 0 0.15em #1a133b;
-}
+} */
