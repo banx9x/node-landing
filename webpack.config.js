@@ -3,6 +3,7 @@ const webpack = require("webpack");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 const TerserPlugin = require("terser-webpack-plugin");
 
@@ -76,6 +77,14 @@ module.exports = (env) => {
             }),
             new PurgeCSSPlugin({
                 paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
+            }),
+            new CopyPlugin({
+                patterns: [
+                    {
+                        from: "./src/assets",
+                        to: "resources/assets",
+                    },
+                ],
             }),
             new webpack.ProvidePlugin({
                 $: "jquery",

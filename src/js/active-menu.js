@@ -42,7 +42,6 @@
     let pos = "home";
 
     window.addEventListener("scroll", function () {
-        console.log("LoL");
         let offset = window.pageYOffset;
         if (offset > register) {
             pos != "register" &&

@@ -1,6 +1,8 @@
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+import "./active-menu.js";
+
 import "@fortawesome/fontawesome-free/js/all.min.js";
 
 import "particles.js";
@@ -391,8 +393,6 @@ $(function () {
     };
 });
 
-import "./active-menu.js";
-
 import "../images/1.png";
 import "../images/1.webp";
 import "../images/2.webp";
@@ -452,3 +452,4 @@ import "../images/techmaster-white2.png";
 import "../images/thumbnail.webp";
 import "../images/vo-xuan-hai.webp";
 import "../images/zalo.png";
+import "../images/review1.jpg";
