@@ -1098,3 +1098,52 @@ iframe {
 .btn-load-image:focus {
     box-shadow: 0 0 0.15em #1a133b;
 } */
+
+.review-item,
+.review-text {
+    padding: 0 !important;
+}
+
+.review-text {
+    position: relative;
+}
+
+.review-text a span {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.3s;
+}
+
+.review-text a span svg {
+    color: #fff;
+    transform: scale(0);
+    transition: all 0.3s;
+}
+
+.review-text:hover a span {
+    background-color: rgba(97, 92, 253, 0.3);
+}
+
+.review-text:hover a span svg {
+    transform: scale(3);
+}
+
+.reviewer {
+    padding: 1em !important;
+}
+
+.reviewer-name {
+    margin-bottom: 0 !important;
+    text-align: right;
+}
+
+.reviewer-img {
+    width: 80px;
+}

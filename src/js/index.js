@@ -453,3 +453,4 @@ import "../images/thumbnail.webp";
 import "../images/vo-xuan-hai.webp";
 import "../images/zalo.png";
 import "../images/review1.jpg";
+import "../images/review2.jpg";
