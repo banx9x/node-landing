@@ -28,40 +28,55 @@ flyText(".intro-content .wrapper");
 
 import "../css/index.css";
 
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel";
+// import "owl.carousel/dist/assets/owl.carousel.css";
+// import "owl.carousel";
 
 import "slick-carousel";
 // Review
 $(function () {
     const owl = $(".review-slider");
 
-    owl.owlCarousel({
-        nav: true,
+    owl.slick({
+        arrows: false,
         dots: false,
-        items: 2,
-        center: false,
-        stagePadding: 0,
-        responsive: {
-            0: {
-                stagePadding: 0,
-                items: 1,
+        slidesToShow: 1,
+        mobileFirst: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                },
             },
-            768: {
-                stagePadding: 60,
-                items: 1,
-            },
-            1200: {},
-        },
+        ],
     });
 
-    owl.trigger("next.owl.carousel");
+    // owl.owlCarousel({
+    //     nav: true,
+    //     dots: false,
+    //     items: 2,
+    //     center: false,
+    //     stagePadding: 0,
+    //     responsive: {
+    //         0: {
+    //             stagePadding: 0,
+    //             items: 1,
+    //         },
+    //         768: {
+    //             stagePadding: 60,
+    //             items: 1,
+    //         },
+    //         1200: {},
+    //     },
+    // });
+
+    // owl.trigger("next.owl.carousel");
 
     const prev = document.querySelector(".owl-prev");
     const next = document.querySelector(".owl-next");
 
-    prev.addEventListener("click", () => owl.trigger("prev.owl.carousel"));
-    next.addEventListener("click", () => owl.trigger("next.owl.carousel"));
+    prev.addEventListener("click", () => owl.slick("slickPrev"));
+    next.addEventListener("click", () => owl.slick("slickNext"));
 
     const teacher = $(".owl-slider");
 
@@ -392,65 +407,3 @@ $(function () {
         }
     };
 });
-
-import "../images/1.png";
-import "../images/1.webp";
-import "../images/2.webp";
-import "../images/3.webp";
-import "../images/4.webp";
-import "../images/5.webp";
-import "../images/6.webp";
-import "../images/7.webp";
-import "../images/about1.png";
-import "../images/about2.png";
-import "../images/about3.png";
-import "../images/about4.png";
-import "../images/favicon.png";
-import "../images/bg.jpg";
-import "../images/ba.webp";
-import "../images/cuong.jpg";
-import "../images/express.webp";
-import "../images/faq.jpg";
-
-import "../images/hd-01.webp";
-import "../images/hd-02.webp";
-import "../images/hd-03.webp";
-import "../images/hd-04.webp";
-import "../images/hd-05.webp";
-import "../images/hd-06.webp";
-import "../images/hd-07.webp";
-import "../images/hd-08.webp";
-import "../images/hd-09.webp";
-import "../images/hd-10.webp";
-import "../images/hd-11.webp";
-import "../images/hd-12.webp";
-import "../images/hd-13.webp";
-import "../images/hd-14.webp";
-import "../images/hd-15.webp";
-import "../images/hd-16.webp";
-import "../images/hd-17.webp";
-import "../images/hd-18.webp";
-import "../images/hd-19.webp";
-import "../images/hd-20.webp";
-import "../images/hd-21.webp";
-
-import "../images/hien.png";
-import "../images/huong.jpg";
-import "../images/huy.png";
-import "../images/intro.png";
-import "../images/logo.png";
-import "../images/man.png";
-import "../images/mongo.webp";
-import "../images/nam.webp";
-import "../images/nguyen-huy-cuong.webp";
-import "../images/node.webp";
-import "../images/nodejs.png";
-import "../images/og.png";
-import "../images/quynh.png";
-import "../images/react.webp";
-import "../images/techmaster-white2.png";
-import "../images/thumbnail.webp";
-import "../images/vo-xuan-hai.webp";
-import "../images/zalo.png";
-import "../images/review1.jpg";
-import "../images/review2.jpg";

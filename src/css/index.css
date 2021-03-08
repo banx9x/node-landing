@@ -59,7 +59,12 @@ svg[class*="fa-quote"] {
 }
 
 .supporter a {
-    text-decoration: none;
+    /* text-decoration: none; */
+    color: inherit;
+}
+
+.supporter svg {
+    color: inherit !important;
 }
 
 .fa-question {
@@ -128,6 +133,7 @@ svg[class*="fa-quote"] {
 }
 
 .page-header .nav-link {
+    display: inline-block;
     font-weight: 700;
     color: #fff !important;
     font-size: 1em;
@@ -500,6 +506,16 @@ svg[class*="fa-quote"] {
     overflow: hidden;
 }
 
+.fee-item .btn-outline-primary {
+    color: #7051ef !important;
+    background-color: #fff !important;
+}
+
+.fee-item .btn-outline-primary:hover {
+    color: #fff !important;
+    background-color: #7051ef !important;
+}
+
 .fee-header {
     padding: 1rem;
     text-align: center;
@@ -589,7 +605,7 @@ svg[class*="fa-quote"] {
 
 .review .slider-item {
     padding: 1em;
-    opacity: 0.5;
+    /* opacity: 0.5; */
     transition: all 0.3s;
 }
 
@@ -668,11 +684,11 @@ svg[class*="fa-quote"] {
     padding: 1rem;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     .review-item {
         opacity: 0.5;
     }
-}
+} */
 
 .owl-stage .review-item {
     opacity: 1;
@@ -1146,4 +1162,14 @@ iframe {
 
 .reviewer-img {
     width: 80px;
+}
+
+.slick-track {
+    display: flex !important;
+}
+
+@media (max-width: 768px) {
+    .link-list {
+        padding-left: 0;
+    }
 }

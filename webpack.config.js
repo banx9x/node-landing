@@ -37,46 +37,17 @@ module.exports = (env) => {
                 },
                 {
                     test: /\.css$/i,
-                    use: [
-                        {
-                            loader: "style-loader",
-                        },
-                        { loader: "css-loader" },
-                        { loader: "postcss-loader" },
-                    ],
-                },
-                {
-                    test: /\.(png|svg|jpg|jpeg|webp|gif)$/i,
-                    use: {
-                        loader: "file-loader",
-                        options: {
-                            name: "resources/images/[name].[ext]",
-                        },
-                    },
+                    use: ["style-loader", "css-loader", "postcss-loader"],
                 },
             ],
         },
         plugins: [
             // TODO
-            new HtmlWebpackPlugin({
-                filename: "index.html",
-                template: "./src/index.html",
-                chunks: ["common", "index"],
-            }),
-            new FaviconsWebpackPlugin({
-                logo: "./src/favicon.png",
-                cache: true,
-                prefix: "resources/favicon/",
-            }),
             new CleanWebpackPlugin(),
-            new MiniCssExtractPlugin({
-                filename: prod
-                    ? "resources/css/[name].[contenthash].css"
-                    : "resources/css/[name].css",
-                chunkFilename: "[id].css",
-            }),
-            new PurgeCSSPlugin({
-                paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
+            new webpack.ProvidePlugin({
+                $: "jquery",
+                jQuery: "jquery",
+                "window.jQuery": "jquery",
             }),
             new CopyPlugin({
                 patterns: [
@@ -84,15 +55,31 @@ module.exports = (env) => {
                         from: "./src/assets",
                         to: "resources/assets",
                     },
+                    {
+                        from: "./src/images",
+                        to: "resources/images",
+                    },
                 ],
             }),
-            new webpack.ProvidePlugin({
-                $: "jquery",
-                jQuery: "jquery",
-                "window.jQuery": "jquery",
+            new FaviconsWebpackPlugin({
+                logo: "./src/favicon.png",
+                cache: true,
+                prefix: "resources/favicon/",
+            }),
+            new MiniCssExtractPlugin({
+                filename: "resources/css/[name].[contenthash].css",
+            }),
+            new HtmlWebpackPlugin({
+                filename: "index.html",
+                template: "./src/index.html",
+                chunks: ["index"],
+            }),
+            new PurgeCSSPlugin({
+                paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
             }),
         ],
         optimization: {
+            minimize: true,
             minimizer: [
                 new CssMinimizerPlugin(),
                 new TerserPlugin({
