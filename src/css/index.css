@@ -1,5 +1,5 @@
 :root {
-    --heading: 26px;
+    --heading: 22px;
     --heading-line-height: 56px;
 
     --section-padding: 2em;
@@ -425,7 +425,11 @@ svg[class*="fa-quote"] {
 
 /* MERN */
 .mern {
-    background-color: #28d5c233;
+    background-color: #7051ef;
+}
+
+.mern .left {
+    color: #fff;
 }
 
 .mern-item {
@@ -582,8 +586,18 @@ svg[class*="fa-quote"] {
 }
 
 /* FAQ */
-.faq {
-    background-size: cover;
+@media (max-width: 991.98px) {
+    .faq {
+        background-position: right top;
+        background-size: 30%;
+    }
+}
+
+@media (min-width: 992px) {
+    .faq {
+        background-position: left bottom;
+        background-size: auto 70%;
+    }
 }
 
 .faq-item {
@@ -1084,6 +1098,26 @@ iframe {
 }
 
 /* Product */
+#product {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#review {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media (min-width: 992px) {
+    #review {
+        background-size: 70%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
 .slick-list,
 .slick-slide,
 .product-item {

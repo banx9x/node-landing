@@ -1,11 +1,13 @@
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import "@fancyapps/fancybox";
+import "@fancyapps/fancybox/dist/jquery.fancybox.min.css";
 import "./active-menu.js";
-
 import "@fortawesome/fontawesome-free/js/all.min.js";
-
 import "particles.js";
+import "lazysizes";
+import "../css/index.css";
+
 particlesJS.load(
     "page-header",
     "resources/assets/particlesjs-config.json",
@@ -26,11 +28,6 @@ particlesJS.load(
 import flyText from "./intro-text.js";
 flyText(".intro-content .wrapper");
 
-import "../css/index.css";
-
-// import "owl.carousel/dist/assets/owl.carousel.css";
-// import "owl.carousel";
-
 import "slick-carousel";
 // Review
 $(function () {
@@ -50,27 +47,6 @@ $(function () {
             },
         ],
     });
-
-    // owl.owlCarousel({
-    //     nav: true,
-    //     dots: false,
-    //     items: 2,
-    //     center: false,
-    //     stagePadding: 0,
-    //     responsive: {
-    //         0: {
-    //             stagePadding: 0,
-    //             items: 1,
-    //         },
-    //         768: {
-    //             stagePadding: 60,
-    //             items: 1,
-    //         },
-    //         1200: {},
-    //     },
-    // });
-
-    // owl.trigger("next.owl.carousel");
 
     const prev = document.querySelector(".owl-prev");
     const next = document.querySelector(".owl-next");
@@ -297,10 +273,6 @@ document.getElementById("btn-register").addEventListener(
         };
     })()
 );
-
-import "lazysizes";
-import "@fancyapps/fancybox";
-import "@fancyapps/fancybox/dist/jquery.fancybox.min.css";
 
 $(function () {
     let images = [
