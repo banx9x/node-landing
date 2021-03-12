@@ -92,11 +92,11 @@ $(function () {
         slidesToShow: 3,
         slidesToScroll: 1,
         initialSlide: 1,
-        centerMode: true,
+        centerMode: false,
         centerPadding: 30,
         responsive: [
             {
-                breakpoint: 992,
+                breakpoint: 1200,
                 settings: {
                     arrows: false,
                     slidesToShow: 2,
@@ -144,11 +144,10 @@ $(function () {
         infinite: false,
         arrows: false,
         slidesToShow: 3,
-        centerMode: true,
-        centerPadding: 30,
+        centerMode: false,
         responsive: [
             {
-                breakpoint: 992,
+                breakpoint: 1200,
                 settings: {
                     arrows: false,
                     slidesToShow: 2,
@@ -173,6 +172,23 @@ $(function () {
         fee.slick("slickPrev");
     });
     feeNext.addEventListener("click", () => fee.slick("slickNext"));
+
+    const video = $(".video-slider");
+
+    video.slick({
+        infinite: false,
+        arrows: false,
+        slidesToShow: 1,
+        centerMode: false,
+    });
+
+    const videoPrev = document.querySelector(".video-prev");
+    const videoNext = document.querySelector(".video-next");
+
+    videoPrev.addEventListener("click", () => {
+        video.slick("slickPrev");
+    });
+    videoNext.addEventListener("click", () => video.slick("slickNext"));
 });
 
 // Register
