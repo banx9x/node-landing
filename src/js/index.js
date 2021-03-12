@@ -54,6 +54,36 @@ $(function () {
     prev.addEventListener("click", () => owl.slick("slickPrev"));
     next.addEventListener("click", () => owl.slick("slickNext"));
 
+    const blog = $("#blog-slider");
+
+    blog.slick({
+        arrows: false,
+        dots: false,
+        slidesToShow: 1,
+        mobileFirst: true,
+        adaptiveHeight: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                },
+            },
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                },
+            },
+        ],
+    });
+
+    const blogPrev = document.querySelector(".blog-prev");
+    const blogNext = document.querySelector(".blog-next");
+
+    blogPrev.addEventListener("click", () => blog.slick("slickPrev"));
+    blogNext.addEventListener("click", () => blog.slick("slickNext"));
+
     const teacher = $(".owl-slider");
 
     teacher.slick({
@@ -290,10 +320,6 @@ $(function () {
         },
         {
             link: "resources/images/hd-12.webp",
-            size: "col-lg-3",
-        },
-        {
-            link: "resources/images/hd-13.webp",
             size: "col-lg-3",
         },
     ];

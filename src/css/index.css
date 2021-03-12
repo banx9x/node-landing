@@ -255,6 +255,10 @@ svg[class*="fa-quote"] {
     border-color: #7051ef;
 }
 
+.btn-outline-primary:hover svg {
+    color: #fff;
+}
+
 .btn-outline-primary:focus {
     box-shadow: 0 0 0.15em #7151efb6;
 }
@@ -648,7 +652,9 @@ svg[class*="fa-quote"] {
 .product-prev,
 .product-next,
 .fee-next,
-.fee-prev {
+.fee-prev,
+.blog-next,
+.blog-prev {
     background-color: #fff;
     border-color: #7051ef;
     color: #7051ef;
@@ -662,7 +668,9 @@ svg[class*="fa-quote"] {
 .product-prev svg,
 .product-next svg,
 .fee-next svg,
-.fee-prev svg {
+.fee-prev svg,
+.blog-next svg,
+.blog-prev svg {
     color: inherit !important;
 }
 
@@ -672,7 +680,9 @@ svg[class*="fa-quote"] {
 .product-prev:hover,
 .product-next:hover,
 .fee-next:hover,
-.fee-prev:hover {
+.fee-prev:hover,
+.blog-next:hover,
+.blog-prev:hover {
     background-color: #7051ef !important;
     color: #fff !important;
     border-color: #7051ef !important;
@@ -683,7 +693,9 @@ svg[class*="fa-quote"] {
 .product-prev:focus,
 .product-next:focus,
 .fee-next:focus,
-.fee-prev:focus {
+.fee-prev:focus,
+.blog-next:focus,
+.blog-prev:focus {
     box-shadow: none;
     background-color: #7051ef;
     border-color: #7051ef;
@@ -1206,4 +1218,83 @@ iframe {
     .link-list {
         padding-left: 0;
     }
+}
+
+/* Blog */
+/* .blog {
+    background-color: #f3f3f3;
+} */
+.blog .container {
+    overflow-x: hidden;
+}
+
+.blog .slider-item {
+    padding: 1rem;
+}
+.blog-item {
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgb(0, 0, 0, 0.075);
+    transition: all 0.3s;
+    background-color: #fff;
+    overflow: hidden;
+}
+.slick-current .blog-item {
+    opacity: 1;
+}
+.blog-detail {
+    padding: 1rem;
+}
+.blog-item:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+.blog .blog-item a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+.blog-time {
+    margin-bottom: 5px;
+    color: #777;
+}
+.blog-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+.blog-desc {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #777;
+}
+
+.blog-thumbnail {
+    position: relative;
+    padding-top: 60%;
+}
+
+.blog-thumbnail img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog-btn {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.blog .more {
+    text-align: center;
 }
